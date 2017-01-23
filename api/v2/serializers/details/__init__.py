@@ -21,6 +21,7 @@ from .instance_history import InstanceStatusHistorySerializer
 from .instance import InstanceSerializer
 from .license import LicenseSerializer
 from .link import ExternalLinkSerializer
+from .login import LoginSerializer
 from .maintenance_record import MaintenanceRecordSerializer
 from .machine_request import (MachineRequestSerializer, UserMachineRequestSerializer)
 from .project import ProjectSerializer

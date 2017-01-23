@@ -31,6 +31,7 @@ class ProviderViewSet(MultipleFieldLookup, AuthViewSet):
         Filter providers by current user
         """
         user = self.request.user
+        logger.info("provider_queryset")
         # Anonymous access: Show ONLY the providers that are:
         # publically available, active, and non-end dated
         if (type(user) == AnonymousUser):

@@ -24,6 +24,7 @@ from .instance_history import InstanceStatusHistoryViewSet
 from .instance_action import InstanceActionViewSet
 from .license import LicenseViewSet
 from .link import ExternalLinkViewSet
+from .login import LoginKeystoneViewSet
 from .machine_request import MachineRequestViewSet
 from .maintenance_record import MaintenanceRecordViewSet
 from .platform_type import PlatformTypeViewSet

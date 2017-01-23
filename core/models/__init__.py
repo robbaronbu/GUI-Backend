@@ -20,6 +20,7 @@ from core.models.group import Group, IdentityMembership,\
 from core.models.identity import Identity
 from core.models.instance_tag import InstanceTag
 from core.models.link import ExternalLink
+from core.models.login import Login
 from core.models.profile import UserProfile
 from core.models.project import Project
 from core.models.project_application import ProjectApplication
