@@ -161,6 +161,13 @@ class InstanceList(AuthAPIView):
         allocation_source_id = data.pop("allocation_source_id",None)
         machine_alias = data.pop("machine_alias")
         hypervisor_name = data.pop("hypervisor", None)
+        try:
+            provider=Provider.objects.get(uuid=provider_uuid)
+            identity=Identity.objects.get(uuid=identity_uuid)
+            data.update(provider.get_credentials())
+            data.update(identity.get_credentials())
+        except:
+            logger.warn("identity_uuid or provider_uuid invalid")
         if hypervisor_name:
             # Previous method passed this with 'None' but that fails now.
             # This check will only add the ex_ value if it is 'truthy'.

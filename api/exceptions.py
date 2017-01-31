@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import exceptions as rest_exceptions
 from django.utils.translation import ugettext_lazy as _
 from threepio import logger, api_logger
+import traceback
 
 def bad_request(errors, prefix="", status_code=None):
     """
@@ -25,6 +26,7 @@ def failure_response(status, message):
     Return a djangorestframework Response object given an error
     status and message.
     """
+    logger.info(repr(traceback.format_stack()))   
     api_logger.info("status: %s message: %s" % (status, message))
     return Response({"errors":
                      [{'code': status,

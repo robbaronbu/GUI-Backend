@@ -16,6 +16,8 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
             'url',
             'username',
             'end_date',
+            'domain',    #should be called os_domain
+            'user_id',   #should be called os_user_id
             # 'first_name',
             # 'last_name',
             # 'email',

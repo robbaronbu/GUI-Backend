@@ -56,6 +56,7 @@ router.register(r'instance_histories',
 router.register(r'instance_tags', views.InstanceTagViewSet)
 router.register(r'licenses', views.LicenseViewSet)
 router.register(r'links', views.ExternalLinkViewSet)
+router.register(r'login', views.LoginKeystoneViewSet, base_name='login')
 router.register(r'machine_requests', views.MachineRequestViewSet)
 router.register(r'maintenance_records', views.MaintenanceRecordViewSet)
 router.register(r'metrics', views.MetricViewSet)
